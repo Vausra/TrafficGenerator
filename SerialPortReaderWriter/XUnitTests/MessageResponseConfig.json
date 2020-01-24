@@ -1,0 +1,15 @@
+{
+  "Queries": [
+    {
+      "MessageName": "GetStatus",
+      "Request": [ "0xF0", "0x55", "0xa6", "0x0f" ],
+      "Response": [ "0xF0", "0x55", "0xa6", "0x0f" ]
+    },
+
+    {
+      "MessageName": "GetSoftwareVersion",
+      "Request": [ "0xF0", "0x55", "0xa6", "0x0f" ],
+      "Response": [ "0xF0", "0x55", "0xa6", "0x0f" ]
+    }
+  ]
+}

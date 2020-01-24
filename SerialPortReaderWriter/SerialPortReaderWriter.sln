@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerialPortReaderWriter", "SerialPortReaderWriter\SerialPortReaderWriter.csproj", "{2936E7C2-84C4-4E54-8CBA-1E7F16E4CE7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTests", "XUnitTests\XUnitTests.csproj", "{59DBC9BB-2818-493E-9FD5-141D02FFC37C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTests", "XUnitTests\XUnitTests.csproj", "{59DBC9BB-2818-493E-9FD5-141D02FFC37C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopUIWpf", "DesktopUIWpf\DesktopUIWpf.csproj", "{9858C1C6-8E40-4C76-99D7-1CAD1F43F423}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{59DBC9BB-2818-493E-9FD5-141D02FFC37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59DBC9BB-2818-493E-9FD5-141D02FFC37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59DBC9BB-2818-493E-9FD5-141D02FFC37C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9858C1C6-8E40-4C76-99D7-1CAD1F43F423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9858C1C6-8E40-4C76-99D7-1CAD1F43F423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9858C1C6-8E40-4C76-99D7-1CAD1F43F423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9858C1C6-8E40-4C76-99D7-1CAD1F43F423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

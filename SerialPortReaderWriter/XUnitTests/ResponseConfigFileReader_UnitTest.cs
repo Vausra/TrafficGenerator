@@ -10,7 +10,7 @@ namespace XUnitTests
     using Xunit;
 
     /// <summary>
-    /// Test class for <see cref="ResponseConfigurationReader"/>
+    /// Test class for <see cref="ResponseConfigurationReader"/>.
     /// </summary>
     public class ResponseConfigFileReader_UnitTest
     {

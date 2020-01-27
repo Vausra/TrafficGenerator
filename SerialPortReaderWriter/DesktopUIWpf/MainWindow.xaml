@@ -1,18 +1,24 @@
-﻿<Window x:Class="DesktopUIWpf.MainWindow"
+﻿<Window x:Name="RootWindow" x:Class="DesktopUIWpf.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DesktopUIWpf"
+        xmlns:IPAndPortInputUserControl="clr-namespace:DesktopUIWpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-       <TabControl>
-        <TabItem Header="Serial">
-            <Label Content="Content goes here..." />
-        </TabItem>
-        <TabItem Header="Socket" />
-        <TabItem Header="Details" />
-        </TabControl>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <IPAndPortInputUserControl:IpAdressAndPortInput x:Name="IpConfig" Grid.Row="0"/>
+        <IPAndPortInputUserControl:SerialPortParameters x:Name ="SerialConfig" Grid.Row="1"/>
+        <Button Name="Startbutton"  Grid.Row="3" Content="Test Start" Click="StartButton_Click"/>
+        <Button Name="Stopbutton" Grid.Row="4" Content="Test Stop" Click="StopButton_Click"/>
+
     </Grid>
 </Window>

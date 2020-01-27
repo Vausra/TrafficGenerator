@@ -12,6 +12,7 @@
     public class ResponseConfigurationReader
     {
         private const string RootElement = "Queries";
+
         private const string MessageName = "MessageName";
 
         private const string MessageRequest = "Request";

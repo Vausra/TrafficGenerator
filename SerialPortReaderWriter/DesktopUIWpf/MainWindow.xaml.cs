@@ -20,10 +20,9 @@ namespace DesktopUIWpf
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, IDisposable
     {
-
-        SerialReader.SerialPortReaderWriter test;
+        private SerialCommInterface.SerialPortReaderWriter serialPort;
         bool isInitialized = false;
 
         public MainWindow()
@@ -31,8 +30,7 @@ namespace DesktopUIWpf
             InitializeComponent();
             this.Stopbutton.IsEnabled = false;
         }
-
-        
+                
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
             this.Stopbutton.IsEnabled = true;
@@ -42,18 +40,37 @@ namespace DesktopUIWpf
             {
                 this.InitialzeComPort();
             }
-            this.test.StartReadWriteData();
+            this.serialPort.StartReadWriteData();
         }
 
         private void StopButton_Click(object sender, RoutedEventArgs e)
         {
-            this.test.StopWriteData();// = new SerialReader.SerialPortReaderWriter("COM4");
+            this.serialPort.StopWriteData();
             Startbutton.IsEnabled = true;
         }
 
         private void InitialzeComPort()
         {
-            this.test = new SerialReader.SerialPortReaderWriter(this.SerialConfig.PortName_TextBox.Text);
+            if (!string.IsNullOrWhiteSpace(this.SerialConfig.PortName_TextBox.Text))
+            {
+                this.serialPort = new SerialCommInterface.SerialPortReaderWriter(this.SerialConfig.PortName_TextBox.Text);
+            }
+        }
+
+        private void SetComportName(string comPortName)
+        {
+            this.SerialConfig.PortName_TextBox.Text = comPortName;
+        }
+
+        private void ComPortList_Click(object sender, RoutedEventArgs e)
+        {
+            ComPortList tmpWindow = new ComPortList(this.serialPort, this.SetComportName);
+            tmpWindow.Show();
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -17,6 +17,8 @@
 
         <IPAndPortInputUserControl:IpAdressAndPortInput x:Name="IpConfig" Grid.Row="0"/>
         <IPAndPortInputUserControl:SerialPortParameters x:Name ="SerialConfig" Grid.Row="1"/>
+
+        <Button Name="ListComPorts"  Grid.Row="2" Content="ListComPorts" Click="ComPortList_Click"/>
         <Button Name="Startbutton"  Grid.Row="3" Content="Test Start" Click="StartButton_Click"/>
         <Button Name="Stopbutton" Grid.Row="4" Content="Test Stop" Click="StopButton_Click"/>
 

@@ -1,4 +1,4 @@
-﻿namespace SerialPortReaderWriter
+﻿namespace SerialCommInterface
 {
 
     using System;

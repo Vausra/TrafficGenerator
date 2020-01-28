@@ -4,7 +4,7 @@
 
 namespace XUnitTests
 {
-    using SerialPortReaderWriter;
+    using SerialCommInterface;
     using Xunit;
 
     /// <summary>

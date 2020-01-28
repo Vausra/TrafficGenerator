@@ -6,7 +6,7 @@ namespace XUnitTests
 {
     using System.Collections.Generic;
     using System.Linq;
-    using SerialPortReaderWriter;
+    using SerialCommInterface;
     using Xunit;
 
     /// <summary>

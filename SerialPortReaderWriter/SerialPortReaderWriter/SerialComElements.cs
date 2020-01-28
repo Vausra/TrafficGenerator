@@ -5,7 +5,7 @@
 /// <summary>
 /// Namespace of the serial port traffic generator
 /// </summary>
-namespace SerialPortReaderWriter
+namespace SerialCommInterface
 {
     using System;
     using System.Collections.Generic;

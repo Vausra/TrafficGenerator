@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SerialReader
+namespace SerialCommInterface
 {
     using System;
     using System.IO.Ports;
@@ -111,7 +111,6 @@ namespace SerialReader
         /// <param name="data">data to write.</param>
         public void StartReadWriteData()
         {
-
             this.readWriteThread = new Thread(this.WriteDataToPort);
             this.readWriteThread.Start();
         }
@@ -128,7 +127,7 @@ namespace SerialReader
         /// Get a list of available com ports on the system.
         /// </summary>
         /// <returns><see cref="string[]"/> of comports.</returns>
-        public string[] ListComPorts()
+        public static string[] ListComPorts()
         {
             return SerialPort.GetPortNames();
         }
@@ -152,20 +151,22 @@ namespace SerialReader
             while (this.runEnabled)
             {
                 Thread.Sleep(1000);
-                
+
                 // Console.Write("No Data");
                 this.WriteData();
             }
         }
 
         /// <summary>
-        /// Event for incoming data on serial port
+        /// Event for incoming data on serial port.
         /// </summary>
         /// <param name="s">Sender object.</param>
         /// <param name="e">Event arguments.</param>
         private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs eventArgs)
         {
-            Console.WriteLine(this.serialPort.ReadExisting());
+            string result = this.serialPort.ReadExisting();
+
+            Console.WriteLine(result);
         }
 
         private void WriteData()

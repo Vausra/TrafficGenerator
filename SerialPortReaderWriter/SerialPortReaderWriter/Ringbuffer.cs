@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SerialPortReaderWriter
+namespace SerialCommInterface
 {
     using System;
     using System.Collections;
@@ -227,13 +227,13 @@ namespace SerialPortReaderWriter
         }
 
         /// <summary>
-        /// Copies the elements of the RingBuffer to <paramref name="array"/>, 
+        /// Copies the elements of the RingBuffer to <paramref name="array"/>
         /// starting at a particular Array <paramref name="index"/>.
         /// </summary>
-        /// <param name="array">The one-dimensional Array that is the 
-        /// destination of the elements copied from RingBuffer. The Array must 
+        /// <param name="array">The one-dimensional Array that is the
+        /// destination of the elements copied from RingBuffer. The Array must
         /// have zero-based indexing.</param>
-        /// <param name="index">The zero-based index in 
+        /// <param name="index">The zero-based index in
         /// <paramref name="array"/> at which copying begins.</param>
         void ICollection.CopyTo(Array array, int index)
         {
